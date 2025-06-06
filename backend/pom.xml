@@ -62,6 +62,21 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Spring Boot DevTools -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <scope>runtime</scope>
+        <optional>true</optional>
+    </dependency>
+    
+    <!-- DotEnv Support -->
+    <dependency>
+        <groupId>me.paulschwarz</groupId>
+        <artifactId>spring-dotenv</artifactId>
+        <version>2.5.4</version>
+    </dependency>
 	</dependencies>
 
 	<build>

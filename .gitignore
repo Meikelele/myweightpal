@@ -49,3 +49,6 @@ logs/
 node_modules/
 dist/
 .angular/
+
+
+**/.env

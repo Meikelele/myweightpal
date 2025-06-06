@@ -1,10 +1,13 @@
 package com.example.myweightpal.controller;
 
+import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.example.myweightpal.model.Role;
 import com.example.myweightpal.model.User;
+import com.example.myweightpal.model.WeightEntry;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -49,4 +52,30 @@ public class TestController {
             return ResponseEntity.ok(response);
 
     }
+
+    @GetMapping("/entry")
+    public ResponseEntity<Map<String, Object>> testWeightEntry() {
+        Map<String, Object> response = new HashMap<>();
+
+        WeightEntry e1 = new WeightEntry(
+                "user1",                      // userId
+                LocalDate.now(),              // dzisiaj
+                82.4,
+                true,                         // brał kreatynę
+                "Trening nóg"
+        );
+
+        WeightEntry e2 = new WeightEntry(
+                "user1",
+                LocalDate.now().minusDays(1), // wczoraj
+                82.9,
+                false,
+                "Rest day"
+        );
+
+        response.put("success", true);
+        response.put("entries", List.of(e1, e2));
+        return ResponseEntity.ok(response);
+    }
+
 }

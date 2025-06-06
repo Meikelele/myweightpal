@@ -8,8 +8,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Document(collation = "weight_entries")
 public class WeightEntry {
-    private String id;
-    private String userId;
+    private int id;
+    private int userId;
     private LocalDate date;
     private String note;
 
@@ -18,7 +18,7 @@ public class WeightEntry {
 
     public WeightEntry() { }          // wymagany przez Spring Data
 
-    public WeightEntry(String userId, LocalDate date, double weight, boolean tookCreatine, String note) {
+    public WeightEntry(int userId, LocalDate date, double weight, boolean tookCreatine, String note) {
         this.userId = userId;
         this.date = date;
         this.weight = weight;
@@ -26,19 +26,19 @@ public class WeightEntry {
         this.note = note;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 

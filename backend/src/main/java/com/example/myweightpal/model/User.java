@@ -15,7 +15,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User {
 
     @Id
-    private String id;
+    private int id;
 
     @Indexed
     private String username;
@@ -116,11 +116,11 @@ public class User {
         this.lastLoginAt = LocalDateTime.now();
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

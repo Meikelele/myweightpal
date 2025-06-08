@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User {
 
     @Id
-    private int id;
+    private String id;
 
     @Indexed
     private String username;
@@ -41,6 +41,7 @@ public class User {
     private int currentStreak;
     private int longestStreak;
     private int totalEntries;
+    // TODO: creatine fields
     // some fields for represant creatine streak
 
 
@@ -59,6 +60,7 @@ public class User {
         this.currentStreak = 0;
         this.longestStreak = 0;
         this.totalEntries = 0;
+
     }
 
     private String getDefaultAvatarForRole(Role role) {
@@ -113,11 +115,11 @@ public class User {
         this.lastLoginAt = LocalDateTime.now();
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

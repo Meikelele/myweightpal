@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDate;
 
 @AllArgsConstructor
-@Document(collation = "weight_entries")
+@Document(collection = "weight_entries")
 public class WeightEntry {
     private int id;
     private int userId;

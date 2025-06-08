@@ -41,4 +41,11 @@ public class WeightEntryService {
 
         return latestFoundEntry.isEmpty() ? Optional.empty() : Optional.of(latestFoundEntry.get(latestFoundEntry.size() - 1));
     }
+
+    /**
+     *
+     */
+    public List<WeightEntry> findByUserId(int userId) {
+        return weightRepo.findByUserIdOrderByDateAsc(userId);
+    }
 }

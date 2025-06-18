@@ -9,5 +9,6 @@ import java.util.Optional;
 
 public interface WeightEntryRepository extends MongoRepository<WeightEntry, String> {
     List<WeightEntry> findByUserIdOrderByDateAsc(int userId);
+
     Optional<WeightEntry> getWeightEntryByUserIdAndDate(int userId, LocalDate date);
 }

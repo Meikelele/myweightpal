@@ -4,7 +4,7 @@ import io.jsonwebtoken.*;
 import io.jsonwebtoken.JwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
-import lombok.Value;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
@@ -18,12 +18,11 @@ import java.util.Map;
 @Component
 public class JwtUtil {
 
-    //TODO: lombok sucks, cannot revel @value() and boiler code
-    //@Value("${jwt.secret}")
-    private String SECRET_KEY = "mySecretKey123456789012345678901234567890";
+    @Value("${jwt.secret}")
+    private String SECRET_KEY;
 
-    //@Value("${jwt.expiration}")
-    private long EXPIRATION_TIME = 86400000l;
+    @Value("${jwt.expiration}")
+    private long EXPIRATION_TIME;
 
 
     /**
@@ -100,26 +99,26 @@ public class JwtUtil {
      * GENERIC
      * universal method to extracting data from token
      */
-    public <T> T extractFromTicket(String token, ClaimsResolver<T> claimsResolver) {
+    public <T> T extractFromToken(String token, ClaimsResolver<T> claimsResolver) {
         final Claims claims = extractAllClaims(token);
         return claimsResolver.resolve(claims);
     }
 
 
     public String extractUsername(String token) {
-        return extractFromTicket(token, Claims::getSubject);
+        return extractFromToken(token, Claims::getSubject);
     }
 
     public String extractRole(String token) {
-        return extractFromTicket(token, claims -> claims.get("role", String.class));
+        return extractFromToken(token, claims -> claims.get("role", String.class));
     }
 
     public String extractUserId(String token) {
-        return extractFromTicket(token, claims -> claims.get("userId", String.class));
+        return extractFromToken(token, claims -> claims.get("userId", String.class));
     }
 
     public Date extractExpiration(String token) {
-        return extractFromTicket(token, Claims::getExpiration);
+        return extractFromToken(token, Claims::getExpiration);
     }
 
     public boolean isTokenExpired(String token) {

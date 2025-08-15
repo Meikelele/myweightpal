@@ -1,4 +1,8 @@
 package com.example.myweightpal.dto;
 
-public class LoginResponse {
-}
+public record LoginResponse(
+        String accessToken,
+        String userId,
+        String email,
+        String role
+) {}

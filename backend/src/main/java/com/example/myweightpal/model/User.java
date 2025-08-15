@@ -3,11 +3,15 @@ package com.example.myweightpal.model;
 import java.time.LocalDateTime;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+@NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Document(collection = "users")
 public class User {
 
@@ -19,7 +23,7 @@ public class User {
 
     private String password;
 
-    @Indexed
+    @Indexed(unique = true)
     private String email;
 
     private String nickname;
@@ -45,25 +49,30 @@ public class User {
     // some fields for represant creatine streak
 
 
-    public User(String username, String password, String email, Role role) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.role = role;
-
-        this.nickname = username;
-        this.language = "PL";
-        this.theme = "light";
-        this.avatarId = getDefaultAvatarForRole(role);
-        this.isActive = true;
-        this.createdAt = LocalDateTime.now();
-        this.currentStreak = 0;
-        this.longestStreak = 0;
-        this.totalEntries = 0;
-
-    }
+//    @Builder
+//    @NoArgsConstructor
+//    @AllArgsConstructor
+//    @Document(collection = "users")
+//    public User(String username, String password, String email, Role role) {
+//        this.username = username;
+//        this.email = email;
+//        this.password = password;
+//        this.role = role;
+//
+//        this.nickname = username;
+//        this.language = "PL";
+//        this.theme = "light";
+//        this.avatarId = getDefaultAvatarForRole(role);
+//        this.isActive = true;
+//        this.createdAt = LocalDateTime.now();
+//        this.currentStreak = 0;
+//        this.longestStreak = 0;
+//        this.totalEntries = 0;
+//
+//    }
 
     private String getDefaultAvatarForRole(Role role) {
+        if (role == null) return "default_avatar";
         switch (role) {
             case KING:
                 return "king_avatar_1";
@@ -115,6 +124,8 @@ public class User {
         this.lastLoginAt = LocalDateTime.now();
     }
 
+    // --- Gettery/Settery ---
+
     public String getId() {
         return id;
     }
@@ -156,7 +167,7 @@ public class User {
     }
 
     public Role getRole() {
-        return role;
+        return this.role;
     }
 
     public void setRole(Role role) {

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="MyWeightPal logo">
+    <style>
+        :root {
+            /* DOMYŚLNY (na ciemnym tle) */
+            --mwp-ring: #e6e6e6;
+            /* kolor ringu */
+            --mwp-line: #ffffff;
+            /* kolor linii/strzałki */
+            --mwp-ring-w: 5;
+            /* grubość ringu */
+            --mwp-line-w: 4;
+            /* grubość linii */
+        }
+    </style>
+
+    <defs>
+        <!-- mały, minimalistyczny grot -->
+        <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="3.5" markerHeight="3.5" orient="auto">
+            <path d="M0,0 L10,5 L0,10 Z" fill="var(--mwp-line)" />
+        </marker>
+    </defs>
+
+    <!-- tylko ring (bez wypełnienia środka) -->
+    <circle cx="64" cy="64" r="48" fill="none" stroke="var(--mwp-ring)" stroke-width="var(--mwp-ring-w)" />
+
+    <!-- linia trendu ze strzałką; cienka i zaokrąglona -->
+    <polyline points="38,78 54,66 66,72 88,50" fill="none" stroke="var(--mwp-line)" stroke-width="var(--mwp-line-w)"
+        stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" />
+</svg>

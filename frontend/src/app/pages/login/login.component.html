@@ -1,0 +1,51 @@
+<div class="login-page">
+    <p-card class="login-page__card">
+        <h1 class="login-page__card__title">Log in</h1>
+
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <div class="inputWithLabel">
+                <label for="email">Email</label>
+                <input pInputText
+                    id="email"
+                    type="email"
+                    formControlName="email"
+                    placeholder="example@gmail.com"
+                    pSize="large"
+                    
+                />
+                <!-- TODO: -->
+                 <!-- [] walidacja dlugosci hasla
+                 [] walidacja czy to email (czy zawiera @)
+                 [] testy dla pola email (Cypress, Playground?)
+                 [] ??? inne walidacje co do email'a
+                 -->
+                <!-- @if (f['email'].errors && (f['email'].dirty || f['email'].touched)) {
+                <small class="p-error">
+                    @if (f['email'].errors['required']) {
+                    <span>Email is required.</span>
+                    }
+                    @if (f['email'].errors['email']) {
+                    <span>Enter a valid email address.</span>
+                    }
+                </small> -->
+            </div>
+
+            <!-- FIXME: moze uzyc p-password -->
+            <div class="inputWithLabel">
+                <label for="password">Password</label>
+                <input pInputText
+                    id="password"
+                    type="password"
+                    formControlName="password"
+                    placeholder="************"
+                    pSize="large"
+                />
+                <!-- TODO: -->
+                <!-- [] przypomnienie hasla -->
+                <!-- [] logo podgladu hasla -->
+            </div>
+
+            <button pButton class="login-page__loginButton p-button-rounded p-button-lg" severity="secondary" type="submit"><span pButtonLabel>Login</span></button>
+        </form>
+    </p-card>
+</div>

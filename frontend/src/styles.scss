@@ -1,15 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
-@import "primeicons/primeicons.css";
-@import "primeflex/primeflex.css";
+:root {
+  --mwp-bg: black;
+  --ub-orange: #dd4814;
+  --ub-auber: #77216f;
+  --ub-plum: #5e2750;
+  --ub-deep: #2c001e;
+  --ub-gray-warm: #aea79f;
+  --ub-gray-cool: #333333;
+  --text-white: #ffffff;
+
+  --button-fill-white: #ffffff;
+  --button-text-black: #0e0e0e;
+  --button-text-font-size: 1.4rem;
+
+  --text-font-size-header: 2.5rem;
+  --text-font-size-subtext: 1.4rem;
+  --text-font-size-normal: 1.2rem;
+
+  --orange-to-violet-vertical: linear-gradient(
+    180deg,
+    var(--ub-orange) 0%,
+    var(--ub-auber) 50%,
+    var(--ub-plum) 100%
+  );
+  --orange-to-violet-horizontal: linear-gradient(
+    90deg,
+    var(--ub-orange) 0%,
+    var(--ub-auber) 50%,
+    var(--ub-plum) 100%
+  );
+  --orange-to-violet-diagonal: linear-gradient(
+    145deg,
+    var(--ub-orange) 0%,
+    var(--ub-auber) 60%,
+    var(--ub-plum) 100%
+  );
+}
+
 html,
 body {
   height: 100%;
   margin: 0;
   background: var(--mwp-bg);
+  color: var(--text-white);
+  font-size: 1rem;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
   overflow-x: hidden;
-  overscroll-behavior-y: none;
+  overflow-y: auto;
+  overscroll-behavior: auto;
   -webkit-tap-highlight-color: transparent;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
 }

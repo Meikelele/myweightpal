@@ -4,4 +4,12 @@
 html,
 body {
   height: 100%;
+  margin: 0;
+  background: var(--mwp-bg);
+}
+
+body {
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
 }

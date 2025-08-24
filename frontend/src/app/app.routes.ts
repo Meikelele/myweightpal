@@ -3,7 +3,7 @@ import { LandingComponent } from './pages/landing/landing.component';
 
 export const routes: Routes = [
   { path: '', component: LandingComponent },
-  //{ path: 'login', loadComponent: () => import('./pages/login/login.component').then(m => m.LoginComponent) },
+  { path: 'login', loadComponent: () => import('./pages/login/login.component').then(m => m.LoginComponent) },
   { path: '**', redirectTo: '' }
 ];
 

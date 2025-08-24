@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background: #0a0a0a;
+  background: var(--orange-to-violet-diagonal);
   padding: 1rem;
 
   &__card {
@@ -15,16 +15,20 @@
 
   &__button {
     display: inline-block;
-    width: 90%;
-    background: #fff;
-    color: #0a0a0a;
-    border: none;
+    width: clamp(260px, 60vw, 420px);
     padding: 1rem 1.25rem;
-    font-weight: 600;
+
+    background: var(--button-fill-white);
+    color: var(--button-text-black);
+    font-size: var(--button-text-font-size);
+    font-weight: 800;
+
+    border: none;
     border-radius: 14px;
+
     transition: transform 0.08s ease;
     &:active {
-      transform: translateY(0);
+      transform: translateY(1px);
     }
   }
 }

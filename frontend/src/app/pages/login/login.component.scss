@@ -25,6 +25,10 @@
       padding-bottom: 0.8rem;
       gap: 0.5rem;
 
+      input {
+        background: var(--ub-gray-cool);
+      }
+
       label {
         font-size: var(--text-font-size-normal);
       }
@@ -34,7 +38,7 @@
       display: inline-block;
       width: clamp(260px, 60vw, 420px);
       margin-top: 2rem;
-      padding: 1rem 1.25rem;
+      padding: 0.8rem 1.25rem;
 
       background: var(--button-fill-white);
       color: var(--button-text-black);

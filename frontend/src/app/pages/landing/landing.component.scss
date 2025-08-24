@@ -16,7 +16,7 @@
   &__button {
     display: inline-block;
     width: clamp(260px, 60vw, 420px);
-    padding: 1rem 1.25rem;
+    padding: 0.8rem 1.25rem;
 
     background: var(--button-fill-white);
     color: var(--button-text-black);

@@ -18,11 +18,9 @@ public enum Role {
     public String getDisplayName() {
         return displayName;
     }
-
     public int getLevel() {
         return level;
     }
-
     public String getEmoji() {
         return emoji;
     }

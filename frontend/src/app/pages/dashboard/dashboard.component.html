@@ -1,0 +1,47 @@
+<div class="dashboard">
+  <div class="dashboard__header">
+    <div class="dashboard__header__text">
+      <h1>Dashboard</h1>
+    </div>
+  </div>
+  <div class="dashboard__card">
+    <!-- bialy panel z formualrze -->
+    <form class="dashboard__form" [formGroup]="form" (ngSubmit)="onSave()">
+      <div class="dashboard__form__field">
+        <div class="dashboard__form__field__datepicker">
+          <label for="p-datepicker">Date</label>
+          <p-datepicker
+            formControlName="date"
+            dateFormat="dd.mm.yy"
+            [showIcon]="true"
+            [showOnFocus]="true"
+            [iconDisplay]="'input'"
+            [placeholder]="'dd.mm.yyyy'"
+          />
+        </div>
+
+        <div class="dashboard__form__field__weigth">
+          <label for="minmax-buttons">Weigth</label>
+          <p-inputnumber
+            formControlName="weigth"
+            inputId="minmax-buttons"
+            [max]="100"
+            [min]="0"
+          />
+        </div>
+
+        <div class="dashboard__form__field__creatine">
+          <label>Creatine</label>
+          <p-checkbox [binary]="true" />
+        </div>
+
+        <div class="dashboard__form__field__comment">
+          <textarea rows="5" cols="30" pTextarea></textarea>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="horizontal__navigation">
+    <!-- nawigacja pozioma dla mobilek -->
+  </div>
+</div>

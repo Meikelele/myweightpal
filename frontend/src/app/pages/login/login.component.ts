@@ -13,6 +13,7 @@ import { InputTextModule } from 'primeng/inputtext';
 })
 export class LoginComponent {
 
+  // TODO: spinner
   loading = signal(false);
   form!: FormGroup;
 
@@ -36,6 +37,8 @@ export class LoginComponent {
     const { email, password } = this.form.value;
     console.log('LOGIN PAYLOAD', { email, password });
 
+    // TODO: przekierowanie na /dashboard
+    // this.router.navigateByUrl('/dashboard');
     setTimeout(() => this.loading.set(false), 400);
   }
   

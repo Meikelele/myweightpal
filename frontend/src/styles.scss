@@ -7,6 +7,7 @@
   --ub-gray-warm: #aea79f;
   --ub-gray-cool: #333333;
   --text-white: #ffffff;
+  --text-black: #000000;
 
   --pastele-orange: #f39e60;
   --pastele-orange-2: #7c444f;
@@ -63,7 +64,16 @@ body {
   overflow-y: auto;
   overscroll-behavior: auto;
   -webkit-tap-highlight-color: transparent;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
     "Segoe UI Symbol";
 }

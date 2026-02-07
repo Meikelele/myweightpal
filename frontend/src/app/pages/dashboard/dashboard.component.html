@@ -10,6 +10,7 @@
       <div class="dashboard__form__field">
         <div class="dashboard__form__field__datepicker">
           <label for="p-datepicker">Date</label>
+          <br />
           <p-datepicker
             formControlName="date"
             dateFormat="dd.mm.yy"
@@ -22,26 +23,22 @@
 
         <div class="dashboard__form__field__weigth">
           <label for="minmax-buttons">Weigth</label>
-          <p-inputnumber
-            formControlName="weigth"
-            inputId="minmax-buttons"
-            [max]="100"
-            [min]="0"
-          />
+          <br />
+          <p-inputnumber inputId="minmax-buttons" [max]="100" [min]="0" />
         </div>
 
         <div class="dashboard__form__field__creatine">
-          <label>Creatine</label>
           <p-checkbox [binary]="true" />
+          <label>Creatine</label>
         </div>
 
         <div class="dashboard__form__field__comment">
+          <label>Comment</label>
+          <br />
           <textarea rows="5" cols="30" pTextarea></textarea>
         </div>
       </div>
     </form>
   </div>
-  <div class="horizontal__navigation">
-    <!-- nawigacja pozioma dla mobilek -->
-  </div>
+  <div class="horizontal__navigation"></div>
 </div>

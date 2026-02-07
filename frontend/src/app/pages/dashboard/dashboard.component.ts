@@ -20,18 +20,12 @@ import { TextareaModule } from 'primeng/textarea';
 })
 export class DashboardComponent {
   private formBuilder = inject(FormBuilder);
-  checked: any = null;
-  // value1: number = 20;
-  // value2: number = 10.5;
-  // value3: number = 25;
-
-  saving = signal(false);
 
   form = this.formBuilder.group({
     date: [new Date(), Validators.required],
-    // weight: ['', Validators.required],
-    // creatine: [false],
-    // comment: ['']
+    weight: ['', Validators.required],
+    tookCreatine: [false],
+    comment: [''],
   });
 
   protected onSave() {

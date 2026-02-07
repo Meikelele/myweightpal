@@ -24,19 +24,38 @@
         <div class="dashboard__form__field__weigth">
           <label for="minmax-buttons">Weigth</label>
           <br />
-          <p-inputnumber inputId="minmax-buttons" [max]="100" [min]="0" />
+          <p-inputnumber
+            formControlName="weigth"
+            inputId="minmax-buttons"
+            [max]="100"
+            [min]="0"
+          />
         </div>
 
         <div class="dashboard__form__field__creatine">
-          <p-checkbox [binary]="true" />
+          <p-checkbox formControlName="tookCreatine" [binary]="true" />
           <label>Creatine</label>
         </div>
 
         <div class="dashboard__form__field__comment">
           <label>Comment</label>
           <br />
-          <textarea rows="5" cols="30" pTextarea></textarea>
+          <textarea
+            formControlName="comment"
+            rows="5"
+            cols="30"
+            pTextarea
+          ></textarea>
         </div>
+
+        <button
+          pButton
+          class="dashboard__form__field__save p-button-rounded p-button-lg"
+          severity="secondary"
+          type="submit"
+        >
+          <span pButtonLabel>Save</span>
+        </button>
       </div>
     </form>
   </div>

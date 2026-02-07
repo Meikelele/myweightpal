@@ -89,6 +89,26 @@
             width: 100%;
           }
         }
+
+        &__save {
+          display: inline-block;
+          width: clamp(260px, 60vw, 420px);
+          // margin-top: 2rem;
+          padding: 0.8rem 1.25rem;
+
+          background: var(--button-fill-green);
+          color: var(--button-text-black);
+          font-size: var(--button-text-font-size);
+          font-weight: 800;
+
+          border: none;
+          border-radius: 14px;
+
+          transition: transform 0.08s ease;
+          // &:active {
+          //   transform: translateY(1px);
+          // }
+        }
       }
     }
   }

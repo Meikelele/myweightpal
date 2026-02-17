@@ -1,6 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 
+import { HorizontalLineComponent } from '../../shared/ui/horizontal-line/horizontal-line.component';
 import { DatePickerModule } from 'primeng/datepicker';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { CheckboxModule } from 'primeng/checkbox';
@@ -14,6 +15,7 @@ import { TextareaModule } from 'primeng/textarea';
     DatePickerModule,
     InputNumberModule,
     CheckboxModule,
+    HorizontalLineComponent,
   ],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],

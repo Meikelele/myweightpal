@@ -1,11 +1,10 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'mwp-brand',
   standalone: true,
   imports: [],
   templateUrl: './mwp-brand.component.html',
-  styleUrl: './mwp-brand.component.scss'
+  styleUrl: './mwp-brand.component.scss',
 })
-export class MwpBrandComponent {
-}
+export class MwpBrandComponent {}

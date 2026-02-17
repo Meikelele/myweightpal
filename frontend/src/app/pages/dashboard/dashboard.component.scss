@@ -10,20 +10,18 @@
   justify-content: space-between;
 
   &__header {
-    width: 100%;
+    width: 100vw;
     height: 4rem;
-    // background-color: var(--pastele-orange-2);
-    background: var(--orange-to-violet-diagonal);
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+    text-align: center;
     align-items: center;
-
-    // border-radius: 0rem 0rem 0.5rem 0.5rem;
 
     &__text {
       text-align: center;
+      color: var(--text-black);
       h1 {
         margin: 0;
         padding: 0;
@@ -52,7 +50,7 @@
           }
 
           p-datepicker {
-            width: 100%;
+            width: 80vw;
           }
         }
 
@@ -62,7 +60,7 @@
           }
 
           p-inputnumber {
-            width: 100%;
+            width: 80vw;
           }
         }
 
@@ -70,9 +68,7 @@
           display: flex;
           flex-direction: row;
           gap: 0.5em;
-          // justify-content: flex-start;
           label {
-            // padding-left: 0.5em;
             font-weight: 600;
           }
 
@@ -86,14 +82,13 @@
           }
 
           p-textarea {
-            width: 100%;
+            width: 80vw;
           }
         }
 
         &__save {
           display: inline-block;
-          width: clamp(260px, 60vw, 420px);
-          // margin-top: 2rem;
+          width: 80vw;
           padding: 0.8rem 1.25rem;
 
           background: var(--button-fill-green);
@@ -105,9 +100,9 @@
           border-radius: 14px;
 
           transition: transform 0.08s ease;
-          // &:active {
-          //   transform: translateY(1px);
-          // }
+          &:active {
+            transform: translateY(1px);
+          }
         }
       }
     }
@@ -115,8 +110,10 @@
 }
 
 .horizontal__navigation {
-  // width: 100%;
+  width: 100vw;
   height: 4rem;
-  background-color: var(--pastele-orange-2);
-  // border-radius: 0.5rem 0.5rem 0rem 0rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -26,10 +26,12 @@
           <label for="minmax-buttons">Weigth</label>
           <br />
           <p-inputnumber
-            formControlName="weigth"
-            inputId="minmax-buttons"
-            [max]="100"
-            [min]="0"
+            formControlName="weight"
+            inputId="minmaxfraction"
+            [minFractionDigits]="1"
+            [maxFractionDigits]="1"
+            placeholder="ex. 85,5"
+            mode="decimal"
           />
         </div>
 
